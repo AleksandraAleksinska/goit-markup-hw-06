@@ -21,9 +21,9 @@
     <title>Studio</title>
   </head>
   <body>
-    <header>
+    <header class="border">
       <div class="container header-agency">
-        <nav class="nav-style">
+      <nav class="nav-style">
           <a
             class="webstudio link-style"
             href="#"
@@ -66,20 +66,20 @@
           <li class="contacts">
             <a class="nav-contact link-style" href="mailto:info@devstudio.com"
               ><svg class="svg-style" width="16" height="12">
-                <use xlink:href="./images/icons.svg#icon-envelope"></use></svg
-              >info@devstudio.com
-            </a>
+                <use xlink:href="./images/icons.svg#icon-envelope"></use>
+              </svg>info@devstudio.com</a
+            >
           </li>
           <li class="contacts">
             <a class="nav-contact link-style" href="tel:+48111111111"
               ><svg class="svg-style" width="10" height="16">
-                <use xlink:href="./images/icons.svg#icon-phone"></use></svg
-              >+48111111111</a
+                <use xlink:href="./images/icons.svg#icon-phone"></use>
+              </svg>+48111111111</a
             >
           </li>
         </ul>
-      </div>
-    </header>
+        </div> 
+      </header>
     <main>
       <section class="section-primary">
         <div class="container">
@@ -95,13 +95,14 @@
           </button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-              <img
+              <svg
                 class="close-button"
                 src="./images/close.svg"
                 alt="ZAMKNIJ"
                 title="ZAMKNIJ"
-                data-modal-close
-              />
+                data-modal-close>
+              <use xlink: href="./images/icons.svg#icon-close" />
+              </svg>
               <p class="modal-header">Zostaw swoje dane w formularzu poniżej</p>
               <form>
                 <div class="form-box">
@@ -146,34 +147,28 @@
                     />
                   </fieldset>
                 </div>
-                <label class="label-style">Komentarz</label>
+                <label class="label-style" for="comment">Komentarz</label>
                 <textarea
                   class="textarea-style"
+                  id="comment"
                   name="comment"
                   placeholder="Wprowadź tekst"
                 ></textarea>
-                <div class="checkbox-box">
-                  <label>
-                    <input
-                      class="unchecked"
-                      type="checkbox"
-                      name="agreement"
-                      value="agreement"
-                    />Oświadczam iż akceptuję
-                    <a class="link-form" href="#" title="Regulamin">
-                      Regulamin</a
-                    >
-                    i
-                    <a class="link-form" href="#" title="Polityka prywatności">
-                      Politykę Prywatności</a
-                    >.
-                  </label>
-                  <div class="checkbox-style">
-                    <svg class="checked" width="12" height="9">
+                <label  class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="agreement"/>
+                  <span class="checkmark-box">
+                    <svg class="checkmark">
                       <use xlink:href="./images/icons.svg#icon-check" />
                     </svg>
-                  </div>
-                </div>
+                  </span>Oświadczam iż akceptuję
+                  <a class="link-form" href="#" target="_blank" title="Regulamin" >
+                    Regulamin</a
+                  >
+                  i
+                  <a class="link-form" href="#" target="_blank" title="Polityka prywatności">
+                    Politykę Prywatności</a
+                  >.
+                </label>
                 <button class="button-style form-button" type="submit">
                   Wyślij
                 </button>
@@ -713,7 +708,7 @@
           </ul>
         </div>
         <form class="footer-form">
-          <label class="footer-label" for="e-mail"
+          <label class="footer-label" for="e-mail" 
             >ZAPISZ SIĘ DO NEWSLETTERA</label
           >
           <input
